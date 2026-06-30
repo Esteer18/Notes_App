@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:notes/views/notes_view.dart';
 
 void main() {
   runApp(const NotesAPP());
 }
+
 class NotesAPP extends StatelessWidget {
   const NotesAPP({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(brightness: Brightness.dark,),
+      home:const NotesView(),
+    );
   }
 }
